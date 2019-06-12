@@ -46,8 +46,20 @@ public class Execucao {
 		System.out.println("Estado: " + pf.getEstado());
 		System.out.println("RG: " + pf.getRg());
 		System.out.println("CPF: " + pf.getCpf());
-		System.out.println("Disciplinas: " + pf.getDisciplinas());
-		System.out.println("Cursos: " + pf.getCursos());
+		try {
+			for(int i = 0; i < pf.getDisciplinas().length; i++) {
+				System.out.println(pf.getDisciplinas()[i]);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			for(int i = 0; i < pf.getCursos().length; i++) {
+				System.out.println(pf.getCursos()[i]);
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
 
